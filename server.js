@@ -83,9 +83,12 @@ app.post('/api/generate-pdf', async(req, res) => {
   });
 });
 
+
+
+
 /* Connecting to the database and then starting the server. */
 mongoose
-  .connect(MONGODB_URI, { useNewUrlParser: true })
+  .connect(MONGODB_URI)
   .then(() => {
     app.listen(PORT, console.log("Server stated on port :" + PORT));
   })
